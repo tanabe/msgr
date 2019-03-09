@@ -1,0 +1,4 @@
+github "ReactiveX/RxSwift" "4.4.1"
+github "SwiftyBeaver/SwiftyBeaver" "1.6.2"
+github "radex/SwiftyUserDefaults" "4.0.0-beta.1"
+github "roberthein/TinyConstraints" "3.3.1"
