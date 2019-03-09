@@ -12,3 +12,8 @@
     $ bundle exec pod --version
     $ carthage update --platform iOS
     $ open msgr.xcworkspace
+
+## Firebase setup
+
+* Create you own Firebase project
+* Add GoogleService-Info.plist to project
