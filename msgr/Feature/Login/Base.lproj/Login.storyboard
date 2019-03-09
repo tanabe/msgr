@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="msgr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログイン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="civ-0g-MvP">
+                                <rect key="frame" x="153" y="40" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0sY-lE-SAW">
+                                <rect key="frame" x="20" y="122" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCw-hm-oe9">
+                                <rect key="frame" x="20" y="213" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g6-QN-IJU">
+                                <rect key="frame" x="126.5" y="81" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfI-Wm-EbI">
+                                <rect key="frame" x="144" y="172" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSh-QU-nll">
+                                <rect key="frame" x="141.5" y="263" width="92" height="30"/>
+                                <state key="normal" title="ログインする"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PSh-QU-nll" firstAttribute="centerX" secondItem="civ-0g-MvP" secondAttribute="centerX" id="Bkv-r8-pg5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0sY-lE-SAW" secondAttribute="trailing" constant="20" id="FKJ-8d-eBO"/>
+                            <constraint firstItem="hCw-hm-oe9" firstAttribute="top" secondItem="PfI-Wm-EbI" secondAttribute="bottom" constant="20" id="KgP-8K-J07"/>
+                            <constraint firstItem="PfI-Wm-EbI" firstAttribute="top" secondItem="0sY-lE-SAW" secondAttribute="bottom" constant="20" id="T3o-BW-Lpl"/>
+                            <constraint firstItem="5g6-QN-IJU" firstAttribute="top" secondItem="civ-0g-MvP" secondAttribute="bottom" constant="20" id="WlE-i4-jdw"/>
+                            <constraint firstItem="0sY-lE-SAW" firstAttribute="centerX" secondItem="civ-0g-MvP" secondAttribute="centerX" id="aGA-Xx-GhL"/>
+                            <constraint firstItem="0sY-lE-SAW" firstAttribute="top" secondItem="5g6-QN-IJU" secondAttribute="bottom" constant="20" id="cPE-vM-gsh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hCw-hm-oe9" secondAttribute="trailing" constant="20" id="dfG-LF-dVc"/>
+                            <constraint firstItem="civ-0g-MvP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e6E-cq-Zhg"/>
+                            <constraint firstItem="5g6-QN-IJU" firstAttribute="centerX" secondItem="civ-0g-MvP" secondAttribute="centerX" id="hvC-l7-Wre"/>
+                            <constraint firstItem="0sY-lE-SAW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ioK-ji-nSF"/>
+                            <constraint firstItem="civ-0g-MvP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="j4C-Mg-cgx"/>
+                            <constraint firstItem="PfI-Wm-EbI" firstAttribute="centerX" secondItem="civ-0g-MvP" secondAttribute="centerX" id="lE6-nm-HI1"/>
+                            <constraint firstItem="hCw-hm-oe9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mrb-71-eQ3"/>
+                            <constraint firstItem="PSh-QU-nll" firstAttribute="top" secondItem="hCw-hm-oe9" secondAttribute="bottom" constant="20" id="oUg-ez-eog"/>
+                            <constraint firstItem="hCw-hm-oe9" firstAttribute="centerX" secondItem="civ-0g-MvP" secondAttribute="centerX" id="ppR-nk-06b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

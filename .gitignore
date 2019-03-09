@@ -34,7 +34,7 @@ xcuserdata/
 
 ## Playgrounds
 timeline.xctimeline
-playground.xcworkspace
+*.xcworkspace
 
 # Swift Package Manager
 #
@@ -75,3 +75,4 @@ fastlane/test_output
 
 # Firebase
 node_modules/
+GoogleService-Info.plist

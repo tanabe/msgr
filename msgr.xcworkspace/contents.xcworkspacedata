@@ -5,6 +5,9 @@
       location = "group:msgr.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:R.generated.swift">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

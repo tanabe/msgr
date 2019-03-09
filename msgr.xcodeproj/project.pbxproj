@@ -10,7 +10,7 @@
 		62C2EFC63C32964559C1DA89 /* Pods_msgr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DB029F777B0C50CB2E8CC9 /* Pods_msgr.framework */; };
 		D97BC080223361A60089EE45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BC07F223361A60089EE45 /* AppDelegate.swift */; };
 		D97BC082223361A60089EE45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BC081223361A60089EE45 /* ViewController.swift */; };
-		D97BC085223361A60089EE45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97BC083223361A60089EE45 /* Main.storyboard */; };
+		D97BC085223361A60089EE45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97BC083223361A60089EE45 /* Login.storyboard */; };
 		D97BC087223361A70089EE45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97BC086223361A70089EE45 /* Assets.xcassets */; };
 		D97BC08A223361A70089EE45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97BC088223361A70089EE45 /* LaunchScreen.storyboard */; };
 		D993004B22337428006F84B8 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D993004322337428006F84B8 /* SwiftyBeaver.framework */; };
@@ -26,7 +26,7 @@
 		D97BC07C223361A60089EE45 /* msgr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msgr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97BC07F223361A60089EE45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D97BC081223361A60089EE45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D97BC084223361A60089EE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D97BC084223361A60089EE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D97BC086223361A70089EE45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D97BC089223361A70089EE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D97BC08B223361A70089EE45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,14 +104,46 @@
 		D97BC07E223361A60089EE45 /* msgr */ = {
 			isa = PBXGroup;
 			children = (
+				D9930055223379C0006F84B8 /* Feature */,
 				D97BC07F223361A60089EE45 /* AppDelegate.swift */,
-				D97BC081223361A60089EE45 /* ViewController.swift */,
-				D97BC083223361A60089EE45 /* Main.storyboard */,
 				D97BC086223361A70089EE45 /* Assets.xcassets */,
 				D97BC088223361A70089EE45 /* LaunchScreen.storyboard */,
 				D97BC08B223361A70089EE45 /* Info.plist */,
 			);
 			path = msgr;
+			sourceTree = "<group>";
+		};
+		D9930055223379C0006F84B8 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				D9930056223379D2006F84B8 /* Login */,
+				D9930058223379DE006F84B8 /* Message */,
+				D9930057223379D8006F84B8 /* Settings */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		D9930056223379D2006F84B8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D97BC083223361A60089EE45 /* Login.storyboard */,
+				D97BC081223361A60089EE45 /* ViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D9930057223379D8006F84B8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D9930058223379DE006F84B8 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +154,7 @@
 			buildConfigurationList = D97BC08E223361A70089EE45 /* Build configuration list for PBXNativeTarget "msgr" */;
 			buildPhases = (
 				8CF618A24F2C88A4E626C075 /* [CP] Check Pods Manifest.lock */,
+				D993005922339A2A006F84B8 /* R.swift */,
 				D97BC078223361A60089EE45 /* Sources */,
 				D97BC079223361A60089EE45 /* Frameworks */,
 				D97BC07A223361A60089EE45 /* Resources */,
@@ -177,7 +210,7 @@
 			files = (
 				D97BC08A223361A70089EE45 /* LaunchScreen.storyboard in Resources */,
 				D97BC087223361A70089EE45 /* Assets.xcassets in Resources */,
-				D97BC085223361A60089EE45 /* Main.storyboard in Resources */,
+				D97BC085223361A60089EE45 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +297,26 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		D993005922339A2A006F84B8 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -279,12 +332,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D97BC083223361A60089EE45 /* Main.storyboard */ = {
+		D97BC083223361A60089EE45 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D97BC084223361A60089EE45 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		D97BC088223361A70089EE45 /* LaunchScreen.storyboard */ = {
