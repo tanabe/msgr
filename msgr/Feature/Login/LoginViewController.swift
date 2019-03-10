@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
     }
     
     func gotoMessageView() {
-        //let messageNavigationViewController = R.storyboard.message.instantiateInitialViewController()
-        //AppDelegate.shared.window?.rootViewController = messageNavigationViewController
+        let messageNavigationViewController = R.storyboard.message.instantiateInitialViewController()
+        AppDelegate.shared.window?.rootViewController = messageNavigationViewController
     }
 }
