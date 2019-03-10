@@ -56,18 +56,48 @@ class LoginViewController: UIViewController {
 
     func login(email: String, password: String) {
         hideLoginUI()
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error == nil {
                 log.debug("login successful")
+                let fcmToken = Messaging.messaging().fcmToken ?? ""
+                log.debug("FCM token is: \(fcmToken)")
+                if let user = result?.user {
+                    self.updateUser(userId: user.uid, fcmToken: fcmToken)
+                }
                 self.gotoMessageView()
-                let fcmToken = Messaging.messaging().fcmToken
-                log.debug("FCM token is: \(fcmToken ?? "")")
             } else {
                 log.debug("login failure")
             }
         }
     }
     
+    func updateUser(userId: String, fcmToken: String) {
+        let db = Firestore.firestore()
+        let user: [String: Any] = [
+            "fcmToken": fcmToken
+        ]
+        db.collection("users").document(userId).setData(user) { (error) in
+            if let error = error {
+                log.error(error)
+            } else {
+                log.debug("success")
+            }
+        }
+        /*
+        ref = db.collection("users").addDocument(data: [
+            "first": "Ada",
+            "last": "Lovelace",
+            "born": 1815
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+ */
+    }
+
     func gotoMessageView() {
         let messageNavigationViewController = R.storyboard.message.instantiateInitialViewController()
         AppDelegate.shared.window?.rootViewController = messageNavigationViewController
