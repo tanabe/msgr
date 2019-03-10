@@ -7,7 +7,7 @@ target 'msgr' do
 
   # Pods for emessenger
   pod 'Firebase/Core'
-  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
   pod 'Firebase/Auth'
   pod 'R.swift'

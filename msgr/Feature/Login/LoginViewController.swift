@@ -59,6 +59,7 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil {
                 log.debug("login successful")
+                self.gotoMessageView()
                 let fcmToken = Messaging.messaging().fcmToken
                 log.debug("FCM token is: \(fcmToken ?? "")")
             } else {
