@@ -2,3 +2,4 @@ github "ReactiveX/RxSwift" ~> 4.0
 github "SwiftyBeaver/SwiftyBeaver"
 github "radex/SwiftyUserDefaults" "4.0.0-beta.1"
 github "roberthein/TinyConstraints"
+github "pkluz/PKHUD" ~> 4.0

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		62C2EFC63C32964559C1DA89 /* Pods_msgr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DB029F777B0C50CB2E8CC9 /* Pods_msgr.framework */; };
+		D94025AE2234CB2D009FEB56 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94025AD2234CB2D009FEB56 /* PKHUD.framework */; };
+		D94025B42234CC0A009FEB56 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94025B32234CC0A009FEB56 /* MessageViewController.swift */; };
+		D94025B62234CC1A009FEB56 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94025B52234CC1A009FEB56 /* Message.storyboard */; };
 		D97BC080223361A60089EE45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BC07F223361A60089EE45 /* AppDelegate.swift */; };
 		D97BC082223361A60089EE45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BC081223361A60089EE45 /* LoginViewController.swift */; };
 		D97BC085223361A60089EE45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97BC083223361A60089EE45 /* Login.storyboard */; };
@@ -24,6 +27,10 @@
 /* Begin PBXFileReference section */
 		171E9F1F5410B95DABA06BB8 /* Pods-msgr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msgr.debug.xcconfig"; path = "Target Support Files/Pods-msgr/Pods-msgr.debug.xcconfig"; sourceTree = "<group>"; };
 		5CFF105CEE1613C6B81B5E6B /* Pods-msgr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-msgr.release.xcconfig"; path = "Target Support Files/Pods-msgr/Pods-msgr.release.xcconfig"; sourceTree = "<group>"; };
+		D94025AC2234C6AF009FEB56 /* msgr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = msgr.entitlements; sourceTree = "<group>"; };
+		D94025AD2234CB2D009FEB56 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
+		D94025B32234CC0A009FEB56 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		D94025B52234CC1A009FEB56 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		D97BC07C223361A60089EE45 /* msgr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msgr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97BC07F223361A60089EE45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D97BC081223361A60089EE45 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94025AE2234CB2D009FEB56 /* PKHUD.framework in Frameworks */,
 				D993004B22337428006F84B8 /* SwiftyBeaver.framework in Frameworks */,
 				D993004F22337428006F84B8 /* RxCocoa.framework in Frameworks */,
 				D993005022337428006F84B8 /* SwiftyUserDefaults.framework in Frameworks */,
@@ -63,6 +71,7 @@
 		383FDDDC9EDD291B105CAE8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D94025AD2234CB2D009FEB56 /* PKHUD.framework */,
 				D993004A22337428006F84B8 /* RxAtomic.framework */,
 				D993004622337428006F84B8 /* RxBlocking.framework */,
 				D993004722337428006F84B8 /* RxCocoa.framework */,
@@ -106,6 +115,7 @@
 		D97BC07E223361A60089EE45 /* msgr */ = {
 			isa = PBXGroup;
 			children = (
+				D94025AC2234C6AF009FEB56 /* msgr.entitlements */,
 				D9930055223379C0006F84B8 /* Feature */,
 				D97BC07F223361A60089EE45 /* AppDelegate.swift */,
 				D97BC086223361A70089EE45 /* Assets.xcassets */,
@@ -145,6 +155,8 @@
 		D9930058223379DE006F84B8 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				D94025B52234CC1A009FEB56 /* Message.storyboard */,
+				D94025B32234CC0A009FEB56 /* MessageViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -185,6 +197,11 @@
 				TargetAttributes = {
 					D97BC07B223361A60089EE45 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -213,6 +230,7 @@
 			files = (
 				D97BC08A223361A70089EE45 /* LaunchScreen.storyboard in Resources */,
 				D993005D2233C851006F84B8 /* GoogleService-Info.plist in Resources */,
+				D94025B62234CC1A009FEB56 /* Message.storyboard in Resources */,
 				D97BC087223361A70089EE45 /* Assets.xcassets in Resources */,
 				D97BC085223361A60089EE45 /* Login.storyboard in Resources */,
 			);
@@ -291,6 +309,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TinyConstraints.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PKHUD.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -319,7 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate --accessLevel public \"$SRCROOT/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -329,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97BC082223361A60089EE45 /* LoginViewController.swift in Sources */,
+				D94025B42234CC0A009FEB56 /* MessageViewController.swift in Sources */,
 				D97BC080223361A60089EE45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +496,7 @@
 			baseConfigurationReference = 171E9F1F5410B95DABA06BB8 /* Pods-msgr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = msgr/msgr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3J449432Q;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -500,6 +521,7 @@
 			baseConfigurationReference = 5CFF105CEE1613C6B81B5E6B /* Pods-msgr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = msgr/msgr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N3J449432Q;
 				FRAMEWORK_SEARCH_PATHS = (

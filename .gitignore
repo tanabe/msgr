@@ -76,3 +76,6 @@ fastlane/test_output
 # Firebase
 node_modules/
 GoogleService-Info.plist
+
+# R.swift
+*.generated.swift
