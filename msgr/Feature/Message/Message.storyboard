@@ -33,7 +33,19 @@
                     <view key="view" contentMode="scaleToFill" id="2pd-d1-TFf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jrs-Qg-TKq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jrs-Qg-TKq" firstAttribute="leading" secondItem="dFn-A4-dqq" secondAttribute="leading" id="4wJ-eY-WpX"/>
+                            <constraint firstItem="Jrs-Qg-TKq" firstAttribute="top" secondItem="dFn-A4-dqq" secondAttribute="top" id="jXx-FK-4W3"/>
+                            <constraint firstItem="dFn-A4-dqq" firstAttribute="bottom" secondItem="Jrs-Qg-TKq" secondAttribute="bottom" id="tYK-Sn-Vld"/>
+                            <constraint firstItem="dFn-A4-dqq" firstAttribute="trailing" secondItem="Jrs-Qg-TKq" secondAttribute="trailing" id="xnM-Kg-7TV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dFn-A4-dqq"/>
                     </view>
                     <navigationItem key="navigationItem" id="IHh-CN-9Rn"/>

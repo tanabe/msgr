@@ -12,6 +12,10 @@
 		D94025B42234CC0A009FEB56 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94025B32234CC0A009FEB56 /* MessageViewController.swift */; };
 		D94025B62234CC1A009FEB56 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94025B52234CC1A009FEB56 /* Message.storyboard */; };
 		D94025BC2234CF09009FEB56 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94025BB2234CF09009FEB56 /* R.generated.swift */; };
+		D94025C22237FE3C009FEB56 /* MyBalloonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94025BE2237FE3C009FEB56 /* MyBalloonTableViewCell.xib */; };
+		D94025C32237FE3C009FEB56 /* OpponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94025BF2237FE3C009FEB56 /* OpponentTableViewCell.xib */; };
+		D94025C42237FE3C009FEB56 /* OppoenentBalloonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94025C02237FE3C009FEB56 /* OppoenentBalloonTableViewCell.swift */; };
+		D94025C52237FE3C009FEB56 /* MyBalloonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94025C12237FE3C009FEB56 /* MyBalloonTableViewCell.swift */; };
 		D97BC080223361A60089EE45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BC07F223361A60089EE45 /* AppDelegate.swift */; };
 		D97BC082223361A60089EE45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BC081223361A60089EE45 /* LoginViewController.swift */; };
 		D97BC085223361A60089EE45 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97BC083223361A60089EE45 /* Login.storyboard */; };
@@ -33,6 +37,10 @@
 		D94025B32234CC0A009FEB56 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		D94025B52234CC1A009FEB56 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		D94025BB2234CF09009FEB56 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		D94025BE2237FE3C009FEB56 /* MyBalloonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyBalloonTableViewCell.xib; sourceTree = "<group>"; };
+		D94025BF2237FE3C009FEB56 /* OpponentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpponentTableViewCell.xib; sourceTree = "<group>"; };
+		D94025C02237FE3C009FEB56 /* OppoenentBalloonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OppoenentBalloonTableViewCell.swift; sourceTree = "<group>"; };
+		D94025C12237FE3C009FEB56 /* MyBalloonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBalloonTableViewCell.swift; sourceTree = "<group>"; };
 		D97BC07C223361A60089EE45 /* msgr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msgr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97BC07F223361A60089EE45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D97BC081223361A60089EE45 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +102,17 @@
 				5CFF105CEE1613C6B81B5E6B /* Pods-msgr.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D94025BD2237FE3C009FEB56 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D94025BE2237FE3C009FEB56 /* MyBalloonTableViewCell.xib */,
+				D94025BF2237FE3C009FEB56 /* OpponentTableViewCell.xib */,
+				D94025C02237FE3C009FEB56 /* OppoenentBalloonTableViewCell.swift */,
+				D94025C12237FE3C009FEB56 /* MyBalloonTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D97BC073223361A60089EE45 = {
@@ -158,6 +177,7 @@
 		D9930058223379DE006F84B8 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				D94025BD2237FE3C009FEB56 /* Cell */,
 				D94025B52234CC1A009FEB56 /* Message.storyboard */,
 				D94025B32234CC0A009FEB56 /* MessageViewController.swift */,
 			);
@@ -233,7 +253,9 @@
 			files = (
 				D97BC08A223361A70089EE45 /* LaunchScreen.storyboard in Resources */,
 				D993005D2233C851006F84B8 /* GoogleService-Info.plist in Resources */,
+				D94025C32237FE3C009FEB56 /* OpponentTableViewCell.xib in Resources */,
 				D94025B62234CC1A009FEB56 /* Message.storyboard in Resources */,
+				D94025C22237FE3C009FEB56 /* MyBalloonTableViewCell.xib in Resources */,
 				D97BC087223361A70089EE45 /* Assets.xcassets in Resources */,
 				D97BC085223361A60089EE45 /* Login.storyboard in Resources */,
 			);
@@ -346,7 +368,7 @@
 			);
 			outputPaths = (
 				"",
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -360,9 +382,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97BC082223361A60089EE45 /* LoginViewController.swift in Sources */,
+				D94025C52237FE3C009FEB56 /* MyBalloonTableViewCell.swift in Sources */,
 				D94025B42234CC0A009FEB56 /* MessageViewController.swift in Sources */,
 				D97BC080223361A60089EE45 /* AppDelegate.swift in Sources */,
 				D94025BC2234CF09009FEB56 /* R.generated.swift in Sources */,
+				D94025C42237FE3C009FEB56 /* OppoenentBalloonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

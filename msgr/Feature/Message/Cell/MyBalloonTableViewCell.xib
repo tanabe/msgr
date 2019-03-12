@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyBalloonTableViewCell" rowHeight="257" id="KGk-i7-Jjw" customClass="MyBalloonTableViewCell" customModule="emessenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="257"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="256.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あああああ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wed-Z9-bH8" userLabel="Name Label">
+                        <rect key="frame" x="10" y="10" width="330" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="d4i-t3-GhI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INf-ZR-swZ" userLabel="Balloon View">
+                        <rect key="frame" x="283.5" y="40.5" width="56.5" height="184.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjp-MC-VDi">
+                                <rect key="frame" x="10" y="10" width="36.5" height="164.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="GV2-9l-nBG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="y7c-YQ-Nu7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tjp-MC-VDi" firstAttribute="top" secondItem="INf-ZR-swZ" secondAttribute="top" constant="10" id="8r4-UX-cjb"/>
+                            <constraint firstAttribute="trailing" secondItem="tjp-MC-VDi" secondAttribute="trailing" constant="10" id="Ct7-6Y-OWC"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="LL5-Vw-UnK"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Wld-U8-xXW"/>
+                            <constraint firstItem="tjp-MC-VDi" firstAttribute="leading" secondItem="INf-ZR-swZ" secondAttribute="leading" constant="10" id="dbx-aV-CsP"/>
+                            <constraint firstAttribute="bottom" secondItem="tjp-MC-VDi" secondAttribute="bottom" constant="10" id="kah-kL-fER"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFa-2w-zgz">
+                        <rect key="frame" x="16" y="235" width="328" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="fEz-k0-s2r"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tFa-2w-zgz" firstAttribute="top" secondItem="INf-ZR-swZ" secondAttribute="bottom" constant="10" id="M9L-pU-e1R"/>
+                    <constraint firstItem="tFa-2w-zgz" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="10" id="THU-Ou-yap"/>
+                    <constraint firstItem="wed-Z9-bH8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dSb-lK-Tkb"/>
+                    <constraint firstItem="tFa-2w-zgz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dve-o2-XLB"/>
+                    <constraint firstItem="tFa-2w-zgz" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="ivS-j1-JFd"/>
+                    <constraint firstAttribute="trailing" secondItem="INf-ZR-swZ" secondAttribute="trailing" constant="10" id="jY6-Cy-n3n"/>
+                    <constraint firstItem="INf-ZR-swZ" firstAttribute="top" secondItem="wed-Z9-bH8" secondAttribute="bottom" constant="10" id="nIC-eX-qHb"/>
+                    <constraint firstAttribute="trailing" secondItem="wed-Z9-bH8" secondAttribute="trailing" constant="10" id="qLW-is-kI8"/>
+                    <constraint firstItem="wed-Z9-bH8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xf3-5r-qpf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="tFa-2w-zgz" id="oe3-aT-IA9"/>
+                <outlet property="messageLabel" destination="tjp-MC-VDi" id="gUq-a0-lkP"/>
+                <outlet property="userNameLabel" destination="wed-Z9-bH8" id="i7c-xM-6Uy"/>
+            </connections>
+            <point key="canvasLocation" x="23" y="160.5"/>
+        </tableViewCell>
+    </objects>
+</document>
