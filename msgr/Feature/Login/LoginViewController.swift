@@ -28,37 +28,52 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         FirebaseApp.configure()
-
         bind()
+        if let email = Defaults[.email], let password = Defaults[.password] {
+            hideLoginUI()
+            login(email: email, password: password)
+        } else {
+            showLoginUI()
+        }
     }
 
     func bind() {
         loginButton.rx.tap.asObservable().bind { [weak self] in
             let email = self?.emailTextField.text ?? ""
             let password = self?.passwordTextField.text ?? ""
+            self?.showLoading()
             self?.login(email: email, password: password)
         }.disposed(by: disposeBag)
+        // TODO reactive
+        // this code may not hide loading
+    }
+
+    func showLoading() {
+        HUD.show(.progress)
+    }
+
+    func hideLoading() {
+        HUD.hide()
     }
 
     func hideLoginUI() {
-        HUD.show(.progress)
         loginView.isHidden = true
     }
 
     func showLoginUI() {
-        HUD.hide()
         loginView.isHidden = false
     }
 
     func login(email: String, password: String) {
-        hideLoginUI()
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error == nil {
                 log.debug("login successful")
+                Defaults[.email] = email
+                Defaults[.password] = password
                 let fcmToken = Messaging.messaging().fcmToken ?? ""
                 log.debug("FCM token is: \(fcmToken)")
                 if let user = result?.user {
@@ -67,6 +82,8 @@ class LoginViewController: UIViewController {
                 self.gotoMessageView()
             } else {
                 log.debug("login failure")
+                Defaults.remove(.email)
+                Defaults.remove(.password)
             }
         }
     }
@@ -74,6 +91,7 @@ class LoginViewController: UIViewController {
     func updateUser(userId: String, fcmToken: String) {
         let db = Firestore.firestore()
         let user: [String: Any] = [
+            "name": "todo",
             "fcmToken": fcmToken
         ]
         db.collection("users").document(userId).setData(user) { (error) in
@@ -83,19 +101,6 @@ class LoginViewController: UIViewController {
                 log.debug("success")
             }
         }
-        /*
-        ref = db.collection("users").addDocument(data: [
-            "first": "Ada",
-            "last": "Lovelace",
-            "born": 1815
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
- */
     }
 
     func gotoMessageView() {
